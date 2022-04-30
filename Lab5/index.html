@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio#5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        html{
+            font-family:sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;  
+        }
+
+        h4{
+            font-weight:400;
+        }
+
+        .box{
+                background-color:#f6f6f6;
+                padding: 1.5rem;
+                border-radius:0.5rem;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin-top: 1.5rem;
+                width:80%;
+                overflow:hidden;
+                margin-bottom:0.2rem;
+            }
+
+        @media (min-width: 760px) {
+            .box{
+                width:22rem;
+            }
+            
+            input[type="number"]{
+                display:inline-block;
+                width: 50%;
+            }
+
+        .caja-botones{
+                display:flex;
+                flex-direction: row-reverse;
+        }
+        
+        .btn{
+            width: 50%;
+        }
+        }
+
+        .btn{
+            width:100%;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            line-height: 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 0.60rem;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            cursor: pointer;
+            margin: 0.3rem 0.1rem;
+        }
+
+        input[type="number"]{
+            line-height: 1.5rem;
+            background-color: #ffffff;
+            margin: 0.4rem 0;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0.60rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+            outline: none;
+            display:block;
+            width: 90%;
+            overflow: hidden;
+            color:#9F0000;
+            font-size: 1rem;
+        }
+
+        label{
+            color:#8a8a8a;
+            margin:1rem 0;
+            font-size: 1rem;
+        }
+
+        #container{
+            display:flex;
+            flex-wrap: wrap;
+            transition-delay: 0.9s;
+            justify-content: space-around;
+        }
+
+        .tarjeta{
+            padding:0.9rem;
+            border-radius:0.3rem;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            cursor: pointer;
+            margin: 0.5rem 0.3rem;
+            box-sizing: border-box;
+            -webkit-transition: background-color 1s linear;
+            transition: background-color 450ms linear;
+        }
+
+        .tarjeta:hover{
+            background-color:#9F0000;
+            color:#FFFFFF;
+            box-shadow: rgb(95, 143, 194) 0px 20px 30px -10px;
+        }
+
+        .bg-red{
+            background-color: #9F0000;
+        }
+
+        .bg-red:hover{
+            transition: 750ms ease-in;
+            box-shadow: rgb(95, 143, 194) 0px 20px 30px -10px;
+        }
+
+        .bg-gray{
+            background-color: #607d8b;
+        }
+
+        .bg-gray:hover{
+            transition: 750ms ease-in-out;
+            box-shadow: rgb(95, 143, 194) 0px 0px 30px -10px;
+        }
+
+        .box-title{
+            margin:0.2rem 0;
+            font-size:1.4rem;
+            text-transform: capitalize;
+        }
+</style>
+    <!-- La sucesión comienza con los números 0 y 1;2
+    a partir de estos, «cada término es la suma 
+    de los dos anteriores», es la relación de recurrencia
+    que la define.-->
+    <section class="box">
+        <h2 class="box-title">Secuencia Fibonacci</h2>
+        <form id="fibonacci">
+            <label class="box-label" for="size">Ingrese un numero :</label>
+            <input type="number" id="size" placeholder="1-100" autocomplete="off" required/>
+            <div class="caja-botones">
+                <input class="btn bg-gray" type="reset" value="Borrar datos" id="carReset">
+                <input class="btn bg-red" type="submit" value="Generar tarjetas">
+            </div>
+        </form>
+    </section> 
+    <section class="box">
+        <div id="container"><!--Contenedor de tarjetas--></div>
+    </section>
+    <script src="utils.js"></script>
+    <script src="index.js"></script>
+   <!--<script src="app.js"></script>--> 
+    
+</body>
+</html>
