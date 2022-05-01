@@ -1,2 +1,2 @@
 # Laboratorios-DS9
-Aqui encontraras los laboratorios de DS9
+Aqui encontraras todos los laobratorios realizados en la asignatura de DS9.
